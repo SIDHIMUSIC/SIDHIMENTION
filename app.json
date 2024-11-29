@@ -1,17 +1,73 @@
 {
-    "name": "SIDHI 𝗫 𝗠𝗲𝗻𝘁𝗶𝗼𝗻",
-    "description": "𝗕𝗿𝗮𝗻𝗱𝗲𝗱 𝗫 𝗠𝗲𝗻𝘁𝗶𝗼𝗻 𝗜𝘀 𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗔𝗱𝘃𝗮𝗻𝗰𝗲𝗱 𝗕𝗼𝘁 𝗧𝗼 𝗠𝗲𝗻𝘁𝗶𝗼𝗻 𝗔𝗹𝗹 𝗠𝗲𝗺𝗯𝗲𝗿𝘀 𝗜𝗻 𝗚𝗿𝗼𝘂𝗽.",
-    "logo": "https://envs.sh/Ynn.jpg",
-    "env": {
-        "BOT_TOKEN": {
-            "description": "𝗔 𝗕𝗼𝘁'𝘀 𝘁𝗼𝗸𝗲𝗻 𝗳𝗿𝗼𝗺 𝗕𝗼𝘁𝗳𝗮𝘁𝗵𝗲𝗿."
+      "name": "BAN ALL BOT",
+      "description": "advance banall bot",
+      "logo": "https://envs.sh/Ynn.jpg",
+      "keywords": [
+         "ban all bot",
+         "bot",
+         "Group",
+         "Telegram"         
+      ],   
+   "repository": "https://github.com/SIDHIMUSIC/SidhiALLBAN",
+   "stack": "heroku-20",
+   "addons": [
+      {
+         "options": {
+            "version": "15"
+         },
+         "plan": "heroku-postgresql"
+      }
+   ],
+   "env": {
+      "TOKEN": {
+         "description": "Your bot token. Can be obtained from https://telegram.dog/BotFather/",
+         "required": true,
+         "value": "YOUR BOT_TOKEN"
+      },
+      "API_ID": {
+         "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
+         "required": true,
+         "value": "28696702"
+      },
+      "API_HASH": {
+         "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
+         "required": true,
+         "value": "c13657baec6d4122ba90a16bd0900e60"
+      },     
+      "BOT_ID": {
+         "description": "your bot id",
+         "required": true,
+         "value": "7607508416"
+      },  
+      "BOT_USERNAME": {
+         "description": "your bot username without @",
+         "required": true,
+         "value": "SIDHI_BANBOT"
+      },  
+       "BOT_NAME": {
+         "description": "Your bot's name",
+         "required": true,
+         "value": "SIDHI_BANBOT"
+      },      
+      "SUDO": {
+         "description": "list of Auth user Id who can command the bot ",
+         "required": true,
+         "value": "7129262488"
+      }, 
+      "START_IMG": {
+         "description": "give the telegraph link of your network logo.",
+         "required": true,
+         "value": "https://envs.sh/Ynn.jpg"
+      },     
+      "ENV": {
+         "description": "Setting this to ANYTHING will enable environment variables. Leave it as it is",
+         "value": "ANYTHING"
+      }           
+},
+   "formation": {
+            "worker": {
+                "quantity": 1,
+                "size": "eco"
+            }
         }
-        "APP_ID": {
-            "description": "𝗚𝗲𝘁 𝘁𝗵𝗶𝘀 𝘃𝗮𝗹𝘂𝗲 𝗳𝗿𝗼𝗺 𝗺𝘆.𝘁𝗲𝗹𝗲𝗴𝗿𝗮𝗺.𝗼𝗿𝗴! 𝗣𝗹𝗲𝗮𝘀𝗲 𝗱𝗼 𝗻𝗼𝘁 𝘀𝘁𝗲𝗮𝗹."
-        },
-        "API_HASH": {
-            "description": "𝗚𝗲𝘁 𝘁𝗵𝗶𝘀 𝘃𝗮𝗹𝘂𝗲 𝗳𝗿𝗼𝗺 𝗺𝘆.𝘁𝗲𝗹𝗲𝗴𝗿𝗮𝗺.𝗼𝗿𝗴! 𝗣𝗹𝗲𝗮𝘀𝗲 𝗱𝗼 𝗻𝗼𝘁 𝘀𝘁𝗲𝗮𝗹."
-        }
-    },
-    "buildpacks": [{"url": "heroku/python"}]
 }
